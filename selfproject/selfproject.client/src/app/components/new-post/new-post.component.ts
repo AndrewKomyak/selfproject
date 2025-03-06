@@ -26,7 +26,7 @@ export class NewPostComponent {
   onSubmit(): void {
     if (this.newPostForm.valid) {
       this.postsService.addNewPost(this.newPostForm.value as Post).subscribe(response => {
-        console.log(response);
+        this.newPostForm.reset();
       });
     }
   }

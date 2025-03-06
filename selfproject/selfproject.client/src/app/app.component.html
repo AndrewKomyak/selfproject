@@ -1,9 +1,10 @@
-<nav>
+<nav class="navbar">
   <h1>Pet selfproject</h1>
 
   <ul>
-    <li><a [routerLink]="['allposts']" [routerLinkActive]="['active']">All Posts</a></li>
-    <li><a [routerLink]="['newpost']">New Post</a></li>
+    <li><a [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}">Home</a></li>
+    <li><a [routerLink]="['/allposts']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}">All Posts</a></li>
+    <li><a [routerLink]="['/newpost']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}">New Post</a></li>
   </ul>
 </nav>
 <router-outlet></router-outlet>
