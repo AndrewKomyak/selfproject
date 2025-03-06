@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using selfproject.Server.Models;
 
 namespace selfproject.Server.Database
 {
-    public class SelfDbContext : DbContext
+    public class SelfDbContext : IdentityDbContext<ApplicationUser>
     {
         public SelfDbContext(DbContextOptions<SelfDbContext> options) : base(options)
         {

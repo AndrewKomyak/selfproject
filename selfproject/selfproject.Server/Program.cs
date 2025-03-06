@@ -13,13 +13,13 @@ builder.Services.AddCors(options =>
             .AllowCredentials());
 });
 
+DependencyResolver.RegisterServices(builder.Services);
+DependencyResolver.RegisterDatabase(builder.Services);
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-DependencyResolver.RegisterServices(builder.Services);
-DependencyResolver.RegisterDatabase(builder.Services);
 
 var app = builder.Build();
 
