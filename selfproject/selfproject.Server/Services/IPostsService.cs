@@ -7,7 +7,5 @@ namespace selfproject.Server.Services
         IEnumerable<Post> GetAllPosts();
         Post GetPostById(int id);
         void AddPost(Post post);
-
-        int GetNewPostId();
     }
 }

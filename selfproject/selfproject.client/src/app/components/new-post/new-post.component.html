@@ -1,0 +1,11 @@
+<div>
+    <h1>New Post</h1>
+    <form [formGroup]="newPostForm">
+        <title>Post title</title><br>
+        <input type="text" formControlName="title"><br>
+        <title>Post content</title><br>
+        <textarea formControlName="content"></textarea><br>
+        <input type="checkbox" formControlName="isAnonymous">Post anonymously<br>
+        <button (click)="onSubmit()">Submit</button>
+    </form>
+</div>

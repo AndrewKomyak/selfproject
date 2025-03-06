@@ -31,14 +31,5 @@ namespace selfproject.Server.Services
                 _logger.LogError(ex, "Error adding post");
             }
         }
-
-        public int GetNewPostId()
-        {
-            if (!_context.Posts.Any())
-            {
-                return 0;
-            }
-            return _context.Posts.Max(p => p.Id) + 1;
-        }
     }
 }
