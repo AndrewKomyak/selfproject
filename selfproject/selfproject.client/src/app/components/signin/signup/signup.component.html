@@ -1,0 +1,13 @@
+<div>
+    <form [formGroup]="signupForm">
+        <input type="text" placeholder="Username" formControlName="login">
+        <p>Password</p>
+        <input type="password" placeholder="Password" formControlName="password">
+        <p>Repeat Password</p>
+        <input type="password" placeholder="Repeat password" formControlName="repeatPassword">
+        <button (click)="onSubmit()" class="btn" [disabled]="!signupForm.valid">Create new user</button>
+    </form>
+    <ul *ngIf="errorList.length > 0">
+        <li *ngFor="let error of errorList" class="validation-error">{{ error }}</li>
+    </ul>
+</div>

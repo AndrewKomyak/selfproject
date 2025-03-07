@@ -1,0 +1,16 @@
+<h1>
+    Sign In page
+</h1>
+
+<div>
+    <p>Login</p>
+    <input type="text" placeholder="Username">
+    <p>Password</p>
+    <input type="password" placeholder="Password">
+    <input type="button" value="Sign In">
+    <hr>
+    <p>Do not have an account?</p>
+    <a [routerLink]="['/signin','signup']">Sign Up</a>
+
+    <router-outlet></router-outlet>
+</div>
