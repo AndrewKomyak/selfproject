@@ -18,8 +18,13 @@ export class AuthService {
   login(username: string, password: string) {
     return this.http.post<any>(`${this.apiUrl}/login`, { username, password })
       .subscribe(data => {
+        console.log('localstorage user', localStorage.getItem('currentUser'));
+        console.log('data', data);
         localStorage.setItem('currentUser', JSON.stringify(data));
+        console.log('currentUser', this.currentUserSubject);
+        console.log('localstorage user', localStorage.getItem('currentUser'));
         this.currentUserSubject.next(data);
+        console.log('currentUser after next', this.currentUserSubject);
       });
   }
 

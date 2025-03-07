@@ -3,11 +3,13 @@
 </h1>
 
 <div>
-    <p>Login</p>
-    <input type="text" placeholder="Username">
-    <p>Password</p>
-    <input type="password" placeholder="Password">
-    <input type="button" value="Sign In">
+    <form [formGroup]="signinForm">
+        <p>Login</p>
+        <input type="text" placeholder="Login" formControlName="login">
+        <p>Password</p>
+        <input type="password" placeholder="Password" formControlName="password">
+        <button (click)="onSubmit()" class="btn" [disabled]="!signinForm.valid">Sign in</button>
+    </form>
     <hr>
     <p>Do not have an account?</p>
     <a [routerLink]="['/signin','signup']">Sign Up</a>
